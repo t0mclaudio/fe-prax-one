@@ -1,0 +1,82 @@
+.page {
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  height: 100vh;
+}
+
+.header {
+  background-color: #2ecc71;
+  padding: 1rem;
+  color: #fff;
+  header {
+    min-width: 400px;
+    max-width: 800px;
+    margin: 0 auto;
+    ul {
+      display: flex;
+      align-content: center;
+      align-items: flex-end;
+      justify-content: space-around;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      flex-flow: row wrap;
+      gap: 2%;
+      li {
+        text-align: center;
+        button {
+          all: unset;
+          background-color: white;
+          border-radius: 5px;
+          color: #2ecc71;
+          padding: .8rem;
+          &:hover {
+            cursor: pointer;
+            opacity: 94%;
+          }
+        }
+        a {
+          font-weight: bold;
+          color: #fff;
+          text-decoration: none;
+          display: block;
+          padding: .5rem;
+          border-radius: 5px;
+          &:hover {
+            opacity: 88%;
+            text-decoration: underline;
+          }
+        }
+        .active {
+          pointer-events: none;
+        }
+      }
+      li:first-child {
+        font-size: 2.4rem;
+        order: 2
+      }
+      li:last-child {
+        order: 3
+      }
+    }
+  }
+}
+
+.main {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 1rem;
+}
+
+.footer {
+  background-color: rgba(236, 240, 241,1.0);
+  color: rgba(44, 62, 80,1.0);
+  text-align: right;
+  font-size: 1.1rem;
+  padding: .5rem 2.4rem;
+}
