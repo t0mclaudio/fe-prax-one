@@ -1,8 +1,9 @@
 import { NavLink } from "react-router-dom";
+import styles from './styles.module.scss';
 
 const Header = () => {
   return (
-    <div className="header">
+    <div className={styles.header}>
       <header>
         <nav>
           <ul>
@@ -19,7 +20,7 @@ const Header = () => {
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <div className={styles.footer}>
       <footer>
         <p>&copy; 2021 TODO</p>
       </footer>
@@ -31,7 +32,7 @@ const Page = ({ children }) => {
   return (
     <div className="page">
       <Header />
-      <main>{children}</main>
+      <main className={styles.main}>{children}</main>
       <Footer />
     </div>
   );
