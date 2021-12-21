@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should create snapshot 1`] = `
+<div
+  className="page"
+>
+  <div
+    className="header"
+  >
+    <header>
+      <nav>
+        <ul>
+          <li>
+            TODO
+          </li>
+          <li>
+            <a
+              aria-current="page"
+              className="active"
+              href="/"
+              onClick={[Function]}
+            >
+              Home
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  <main />
+  <div
+    className="footer"
+  >
+    <footer>
+      <p>
+        © 2021 TODO
+      </p>
+    </footer>
+  </div>
+</div>
+`;

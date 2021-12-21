@@ -1,8 +1,21 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { screen, render } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+import renderer from 'react-test-renderer'
+
+it('should create snapshot', () => {
+  const tree = renderer.create(<App />).toJSON();
+  expect(tree).toMatchSnapshot();
+})
+
+it('renders page header and footer', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+  const header = screen.getByText('Home');
+  expect(header).toBeInTheDocument();
+})
+
+it('renders page footer', () => {
+  render(<App />);
+  const footer = screen.getByText(/2021 TODO/i);
+  expect(footer).toBeInTheDocument();
+})
