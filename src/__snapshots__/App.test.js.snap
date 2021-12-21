@@ -27,7 +27,16 @@ exports[`should create snapshot 1`] = `
       </nav>
     </header>
   </div>
-  <main />
+  <main
+    className="main"
+  >
+    <section>
+      <h1>
+        To do
+      </h1>
+      <ul />
+    </section>
+  </main>
   <div
     className="footer"
   >
