@@ -5,8 +5,8 @@ import Todo from "./Todo";
 const AppRoutes = () => {
   return (
     <Routes>
-      <Route path="/" component={Home} />
-      <Route path="/todo/:id" component={Todo} />
+      <Route path="/" element={<Home />} />
+      <Route path="/todo/:id" element={<Todo />} />
     </Routes>
   );
 };
