@@ -1,18 +1,20 @@
 import { NavLink } from "react-router-dom";
-import styles from './styles.module.scss';
-
+import styles from "./styles.module.scss";
+import { FaFire } from "react-icons/fa";
 const Header = () => {
   return (
     <div className={styles.header}>
       <header>
         <nav>
           <ul>
-            <li>TODO APP</li>
+            <li>
+              <FaFire />
+            </li>
             <li>
               <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <NavLink to="#">About</NavLink>
+              <button>Add</button>
             </li>
           </ul>
         </nav>

@@ -27,7 +27,19 @@
       gap: 2%;
       li {
         text-align: center;
+        button {
+          all: unset;
+          background-color: white;
+          border-radius: 5px;
+          color: #2ecc71;
+          padding: .8rem;
+          &:hover {
+            cursor: pointer;
+            opacity: 94%;
+          }
+        }
         a {
+          font-weight: bold;
           color: #fff;
           text-decoration: none;
           display: block;
@@ -35,6 +47,7 @@
           border-radius: 5px;
           &:hover {
             opacity: 88%;
+            text-decoration: underline;
           }
         }
       }
