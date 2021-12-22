@@ -1,17 +1,18 @@
 import { useContext } from "react";
 import { AppContext } from "../context";
+import styles from './styles.module.scss';
 
 const NothingToShow = () => {
   return (
-    <section>
-      <p>Nothing to show</p>
+    <section className={styles.section}>
+      <p className={styles.nothingToShow}>Nothing to show</p>
     </section>
   )
 }
 
 const ToDoList = ({todos}) => {
   return (
-    <section>
+    <section className={styles.section}>
     <ul>
       {
         todos.map(item => {

@@ -40,8 +40,12 @@ exports[`should create snapshot 1`] = `
   <main
     className="main"
   >
-    <section>
-      <p>
+    <section
+      className="section"
+    >
+      <p
+        className="nothingToShow"
+      >
         Nothing to show
       </p>
     </section>

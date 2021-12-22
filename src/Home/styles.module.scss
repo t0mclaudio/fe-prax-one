@@ -1,0 +1,29 @@
+.section {
+  width: 80%;
+  color: gray;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  ul {
+    margin: 2em 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    li {
+      list-style: none;
+      flex-basis: 100%;
+      padding: 1.6rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 2%;
+    }
+  }
+}
+
+.nothingToShow {
+  text-align: center;
+  font-size: 1.6rem;
+  color: gray;
+  margin: auto;
+}
