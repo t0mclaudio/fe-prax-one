@@ -41,10 +41,9 @@ exports[`should create snapshot 1`] = `
     className="main"
   >
     <section>
-      <h1>
-        To do
-      </h1>
-      <ul />
+      <p>
+        Nothing to show
+      </p>
     </section>
   </main>
   <div
