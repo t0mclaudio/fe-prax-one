@@ -11,7 +11,12 @@ const Header = () => {
               <FaFire />
             </li>
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink
+                to="/"
+                className={({ isActive }) => (isActive ? styles.active : "")}
+              >
+                Home
+              </NavLink>
             </li>
             <li>
               <button>Add</button>

@@ -41,9 +41,7 @@ exports[`should create snapshot 1`] = `
             </a>
           </li>
           <li>
-            <button
-              to="#"
-            >
+            <button>
               Add
             </button>
           </li>
