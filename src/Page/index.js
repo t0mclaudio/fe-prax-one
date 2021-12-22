@@ -30,7 +30,7 @@ const Footer = () => {
 
 const Page = ({ children }) => {
   return (
-    <div className="page">
+    <div className={styles.page}>
       <Header />
       <main className={styles.main}>{children}</main>
       <Footer />
