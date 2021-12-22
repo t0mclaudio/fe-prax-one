@@ -7,9 +7,12 @@ const Header = () => {
       <header>
         <nav>
           <ul>
-            <li>TODO</li>
+            <li>TODO APP</li>
             <li>
               <NavLink to="/">Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="#">About</NavLink>
             </li>
           </ul>
         </nav>

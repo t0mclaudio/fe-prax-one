@@ -11,7 +11,7 @@ exports[`should create snapshot 1`] = `
       <nav>
         <ul>
           <li>
-            TODO
+            TODO APP
           </li>
           <li>
             <a
@@ -21,6 +21,16 @@ exports[`should create snapshot 1`] = `
               onClick={[Function]}
             >
               Home
+            </a>
+          </li>
+          <li>
+            <a
+              aria-current="page"
+              className="active"
+              href="/"
+              onClick={[Function]}
+            >
+              About
             </a>
           </li>
         </ul>
