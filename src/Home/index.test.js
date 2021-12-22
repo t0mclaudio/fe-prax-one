@@ -1,12 +1,15 @@
 import { AppContext } from "../context";
 import { screen, render } from "@testing-library/react";
 import Home from "./index";
+import { MemoryRouter } from "react-router-dom";
 
 // setup render
 const renderWithContext = (context) => {
   return render (
     <AppContext.Provider value={context}>
-      <Home />
+      <MemoryRouter>
+        <Home />
+      </MemoryRouter>
     </AppContext.Provider>
   )
 }
