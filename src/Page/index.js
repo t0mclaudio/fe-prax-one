@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import styles from "./styles.module.scss";
 import { FaFire } from "react-icons/fa";
-const Header = () => {
+import { AppContext } from "../context";
+import Modal from "../Modal";
+import styles from "./styles.module.scss";
+
+const Header = ({ openModal }) => {
   return (
     <div className={styles.header}>
       <header>
@@ -19,7 +23,7 @@ const Header = () => {
               </NavLink>
             </li>
             <li>
-              <button>Add</button>
+              <button onClick={() => openModal(true)}>Add</button>
             </li>
           </ul>
         </nav>
@@ -39,10 +43,23 @@ const Footer = () => {
 };
 
 const Page = ({ children }) => {
+  const { isModalOpen, setIsModalOpen } = useContext(AppContext);
   return (
     <div className={styles.page}>
-      <Header />
+      <Header openModal={setIsModalOpen} />
       <main className={styles.main}>{children}</main>
+      <Modal isOpen={isModalOpen}>
+        <div>
+          <form>
+            <label htmlFor="title">Title</label>
+            <input name="title" id="title" type="text" />
+            <div className="buttons">
+              <button type="submit">Add</button>
+              <button type="button">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </Modal>
       <Footer />
     </div>
   );
