@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { FaFire } from "react-icons/fa";
 import { AppContext } from "../context";
 import Modal from "../Modal";
+import AddNewToDo from "../Modal/AddNewToDo";
 import styles from "./styles.module.scss";
 
 const Header = ({ openModal }) => {
@@ -47,18 +48,9 @@ const Page = ({ children }) => {
   return (
     <div className={styles.page}>
       <Header openModal={setIsModalOpen} />
-      <main className={styles.main}>{children}</main>
+      {!isModalOpen && <main className={styles.main}>{children}</main>}
       <Modal isOpen={isModalOpen}>
-        <div>
-          <form>
-            <label htmlFor="title">Title</label>
-            <input name="title" id="title" type="text" />
-            <div className="buttons">
-              <button type="submit">Add</button>
-              <button type="button">Cancel</button>
-            </div>
-          </form>
-        </div>
+        <AddNewToDo />
       </Modal>
       <Footer />
     </div>
