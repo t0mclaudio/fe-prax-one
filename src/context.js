@@ -9,8 +9,11 @@ const AppContextProvider = ({ children }) => {
   const addNewToDo = async (title) => {
     const response = await fetch(process.env.REACT_APP_API_URL, {
       method: "POST",
+      mode: "no-cors",
       headers: {
+        "Access-Control-Allow-Origin": "*",
         "Content-Type": "application/json",
+        Accept: "application/json;odata.metadata=full",
       },
       body: JSON.stringify({ title }),
     });
@@ -22,8 +25,11 @@ const AppContextProvider = ({ children }) => {
   const removeItem = async (id) => {
     await fetch(`${process.env.REACT_APP_API_URL}/${id}`, {
       method: "DELETE",
+      mode: "no-cors",
       headers: {
+        "Access-Control-Allow-Origin": "*",
         "Content-Type": "application/json",
+        Accept: "application/json;odata.metadata=full",
       },
       body: JSON.stringify({ id }),
     });
@@ -32,7 +38,15 @@ const AppContextProvider = ({ children }) => {
 
   useEffect(() => {
     const fetchToDoList = async () => {
-      const response = await fetch(process.env.REACT_APP_API_URL);
+      const response = await fetch(process.env.REACT_APP_API_URL, {
+        method: "GET",
+        mode: "no-cors",
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "application/json",
+          Accept: "application/json;odata.metadata=full",
+        },
+      });
       const data = await response.json();
       setToDoList(data);
     };

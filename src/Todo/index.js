@@ -11,7 +11,15 @@ const Todo = () => {
 
   useEffect(() => {
     const getToDo = async () => {
-      const res = await fetch(`${process.env.REACT_APP_API_URL}/${id}`);
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/${id}`, {
+        method: "GET",
+        mode: "no-cors",
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "application/json",
+          Accept: "application/json;odata.metadata=full",
+        },
+      });
       const todo = await res.json();
       setTodo(todo);
     };
