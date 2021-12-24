@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/t0mclaudio.github.io/fe-prax-one/static/css/main.a5ebb019.css",
-    "main.js": "/t0mclaudio.github.io/fe-prax-one/static/js/main.2f81c5fd.js",
-    "index.html": "/t0mclaudio.github.io/fe-prax-one/index.html",
-    "main.a5ebb019.css.map": "/t0mclaudio.github.io/fe-prax-one/static/css/main.a5ebb019.css.map",
-    "main.2f81c5fd.js.map": "/t0mclaudio.github.io/fe-prax-one/static/js/main.2f81c5fd.js.map"
+    "main.css": "/fe-prax-one/static/css/main.a5ebb019.css",
+    "main.js": "/fe-prax-one/static/js/main.2f81c5fd.js",
+    "index.html": "/fe-prax-one/index.html",
+    "main.a5ebb019.css.map": "/fe-prax-one/static/css/main.a5ebb019.css.map",
+    "main.2f81c5fd.js.map": "/fe-prax-one/static/js/main.2f81c5fd.js.map"
   },
   "entrypoints": [
     "static/css/main.a5ebb019.css",
