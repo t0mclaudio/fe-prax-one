@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/fe-prax-one/static/css/main.a5ebb019.css",
-    "main.js": "/fe-prax-one/static/js/main.7aa87e03.js",
+    "main.css": "/fe-prax-one/static/css/main.3193da1f.css",
+    "main.js": "/fe-prax-one/static/js/main.50d0c722.js",
     "index.html": "/fe-prax-one/index.html",
-    "main.a5ebb019.css.map": "/fe-prax-one/static/css/main.a5ebb019.css.map",
-    "main.7aa87e03.js.map": "/fe-prax-one/static/js/main.7aa87e03.js.map"
+    "main.3193da1f.css.map": "/fe-prax-one/static/css/main.3193da1f.css.map",
+    "main.50d0c722.js.map": "/fe-prax-one/static/js/main.50d0c722.js.map"
   },
   "entrypoints": [
-    "static/css/main.a5ebb019.css",
-    "static/js/main.7aa87e03.js"
+    "static/css/main.3193da1f.css",
+    "static/js/main.50d0c722.js"
   ]
 }
