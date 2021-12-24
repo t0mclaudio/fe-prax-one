@@ -11,7 +11,7 @@ const Todo = () => {
 
   useEffect(() => {
     const getToDo = async () => {
-      const res = await fetch(`http://localhost:3001/todo/${id}`);
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/${id}`);
       const todo = await res.json();
       setTodo(todo);
     };

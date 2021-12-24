@@ -3,10 +3,11 @@ import { useState, useEffect, createContext } from "react";
 export const AppContext = createContext({});
 
 const AppContextProvider = ({ children }) => {
+  console.log(process.env.REACT_APP_API_URL);
   const [toDoList, setToDoList] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const addNewToDo = async (title) => {
-    const response = await fetch("http://localhost:3001/todo", {
+    const response = await fetch(process.env.REACT_APP_API_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -19,7 +20,7 @@ const AppContextProvider = ({ children }) => {
   };
 
   const removeItem = async (id) => {
-    await fetch(`http://localhost:3001/todo/${id}`, {
+    await fetch(`${process.env.REACT_APP_API_URL}/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -31,7 +32,7 @@ const AppContextProvider = ({ children }) => {
 
   useEffect(() => {
     const fetchToDoList = async () => {
-      const response = await fetch("http://localhost:3001/todo");
+      const response = await fetch(process.env.REACT_APP_API_URL);
       const data = await response.json();
       setToDoList(data);
     };
