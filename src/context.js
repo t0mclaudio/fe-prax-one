@@ -18,6 +18,17 @@ const AppContextProvider = ({ children }) => {
     setIsModalOpen(false);
   };
 
+  const removeItem = async (id) => {
+    await fetch(`http://localhost:3001/todo/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ id }),
+    });
+    setToDoList(toDoList.filter((item) => item.id !== id));
+  };
+
   useEffect(() => {
     const fetchToDoList = async () => {
       const response = await fetch("http://localhost:3001/todo");
@@ -29,7 +40,7 @@ const AppContextProvider = ({ children }) => {
 
   return (
     <AppContext.Provider
-      value={{ toDoList, isModalOpen, setIsModalOpen, addNewToDo }}
+      value={{ toDoList, isModalOpen, setIsModalOpen, addNewToDo, removeItem }}
     >
       {children}
     </AppContext.Provider>
