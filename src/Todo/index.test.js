@@ -1,6 +1,6 @@
 import { screen, render, fireEvent } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
-import Todo from ".";
+import Todo from "./index";
 import { AppContext } from "../context";
 
 const generateTodo = (context) => {
@@ -13,30 +13,33 @@ const generateTodo = (context) => {
   );
 };
 
+jest.mock("react-router-dom", () => {
+  return {
+    ...jest.requireActual("react-router-dom"),
+    useParams: () => ({
+      id: "1",
+    }),
+  };
+});
+
 describe("Todo", () => {
-  beforeEach(() => {
-    global.fetch = jest.fn(() =>
-      Promise.resolve({
-        json: () => ({ id: "1 ", title: "Learn Javascript" }),
-      })
-    );
-  });
-  it("renders expected output", async () => {
+  it("renders expected output", () => {
     render(
       generateTodo({
         toDoList: [{ id: "1", title: "Learn Javascript" }],
       })
     );
-    expect(await screen.findByText(/Learn Javascript/i)).toBeInTheDocument();
+    expect(screen.getByText(/Learn Javascript/i)).toBeInTheDocument();
   });
-  it("Triggers delete", async () => {
+  it("Triggers delete", () => {
     const removeItem = jest.fn();
     render(
       generateTodo({
+        toDoList: [{ id: "1", title: "Learn Javascript" }],
         removeItem,
       })
     );
-    const deleteButton = await screen.findByText(/Delete/i);
+    const deleteButton = screen.getByRole("button", /Delete/i);
     fireEvent.click(deleteButton);
     expect(removeItem).toHaveBeenCalledTimes(1);
   });
