@@ -6,7 +6,7 @@ import AppRoutes from "./routes";
 function App() {
   return (
     <AppContextProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Page>
           <AppRoutes />
         </Page>
