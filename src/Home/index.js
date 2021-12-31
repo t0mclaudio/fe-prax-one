@@ -16,9 +16,12 @@ const ToDoList = ({ todos, removeItem }) => {
   return (
     <section className={styles.section}>
       <ul>
-        {todos.map((item) => {
+        {todos.map((item, idx) => {
           return (
-            <li key={item.id}>
+            <li
+              key={item.id}
+              style={{ animationDelay: `${150 * (idx + 1)}ms` }}
+            >
               <p>{item.title}</p>
               <div>
                 <Link to={`todo/${item.id}`}>
