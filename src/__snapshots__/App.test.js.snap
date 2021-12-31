@@ -58,7 +58,13 @@ exports[`should create snapshot 1`] = `
       className="section"
     >
       <ul>
-        <li>
+        <li
+          style={
+            Object {
+              "animationDelay": "150ms",
+            }
+          }
+        >
           <p>
             Practice JavaScript
           </p>
@@ -111,7 +117,13 @@ exports[`should create snapshot 1`] = `
             </button>
           </div>
         </li>
-        <li>
+        <li
+          style={
+            Object {
+              "animationDelay": "300ms",
+            }
+          }
+        >
           <p>
             Practice HTML
           </p>
@@ -164,7 +176,13 @@ exports[`should create snapshot 1`] = `
             </button>
           </div>
         </li>
-        <li>
+        <li
+          style={
+            Object {
+              "animationDelay": "450ms",
+            }
+          }
+        >
           <p>
             Practice CSS
           </p>
@@ -217,7 +235,13 @@ exports[`should create snapshot 1`] = `
             </button>
           </div>
         </li>
-        <li>
+        <li
+          style={
+            Object {
+              "animationDelay": "600ms",
+            }
+          }
+        >
           <p>
             Learn React
           </p>

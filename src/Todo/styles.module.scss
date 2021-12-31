@@ -5,6 +5,17 @@
   align-items: center;
   justify-content: center;
   padding: 0.5em;
+  opacity: 0;
+  animation: build 550ms ease-in-out forwards;
+  @keyframes build {
+    0% {
+      transform: rotateY(90deg);
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
   div {
     display: flex;
     flex-flow: row wrap;

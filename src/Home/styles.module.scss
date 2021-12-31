@@ -21,6 +21,17 @@
       flex-flow: row nowrap;
       justify-content: space-between;
       align-items: center;
+      opacity: 0;
+      animation: build 350ms ease-in-out forwards;
+      @keyframes build {
+        0% {
+          opacity: 0;
+          transform: translateY(-5px);
+        }
+        100% {
+          opacity: 1;
+        }
+      }
       div {
         display: flex;
         button,
